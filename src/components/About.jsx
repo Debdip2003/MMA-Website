@@ -6,7 +6,7 @@ import AboutImageSection from './AboutImageSection'
 
 const About = () => {
     return (
-        <div id='About'>
+        <div>
              <div className='h-screen w-full bg-gradient-to-b from-gray-800 via-black to-black'>
             <div className='mx-10 flex flex-col items-center justify-between h-full px-10 md:flex-row py-20'>
              

@@ -1,19 +1,8 @@
-import About from "./components/About";
-import Home from "./components/Home";
-import LatestEvents from "./components/LatestEvents";
-import Navbar from "./components/Navbar";
-import SponsorAffiliations from "./components/SponsorAffiliations";
+import {RouterProvider } from "react-router-dom";
+import routes from "./routes/routes";
 
 function App() {
-  return (
-    <div className="bg-black">
-      <Navbar />
-      <Home />
-      <About />
-      <LatestEvents />
-      <SponsorAffiliations />
-    </div>
-  );
+  return <RouterProvider router={routes}></RouterProvider>
 }
 
 export default App;

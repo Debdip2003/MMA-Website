@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "..//assests/logo.jpg"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -31,11 +32,11 @@ const Navbar = () => {
             <div><img src={logo} alt='logo' className='h-full w-20 px-4 hover:cursor-pointer hover:scale-105 duration-200'/></div>
                   <ul className='flex justify-center items-center h-full'>
                 {links.map(({id,link})=>{
-             return <li className='px-4 cursor-pointer  text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white' key={id}>{link}</li>
+             return <li className='px-4 cursor-pointer  text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white' key={id}><Link to={link==='Home'? "/":`/${link}`}>{link}</Link></li>
             
                 })}
             </ul>
-            <div><span className='px-4 cursor-pointer text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white'>Contact Us</span></div>
+            <div><span className='px-4 cursor-pointer text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white'><Link to={'/Contact'}>Contact Us</Link></span></div>
         </div>
     )
 }
