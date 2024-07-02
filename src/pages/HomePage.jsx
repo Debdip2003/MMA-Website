@@ -4,7 +4,8 @@ import Home from '../components/Home'
 import About from "..//components/About"
 import LatestEvents from "..//components/LatestEvents"
 import SponsorAffiliations from '../components/SponsorAffiliations'
-import Blogs from '../components/Blogs'
+import Blog from '../components/Blog'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
     return (
@@ -14,7 +15,8 @@ const HomePage = () => {
             <About />
             <LatestEvents/>
             <SponsorAffiliations/>
-            <Blogs/>
+            <Blog/>
+            <Footer/>
         </div>
     )
 }

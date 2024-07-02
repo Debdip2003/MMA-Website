@@ -1,7 +1,4 @@
 import React from 'react'
-import aboutpageImage from "..//assests/aboutpageImage.jpg"
-import aboutpageImage2 from "..//assests/aboutpageImage2.jpg"
-import aboutpageImage3 from "..//assests/aboutpageImage3.jpg"
 import AboutImageSection from './AboutImageSection'
 
 const About = () => {
@@ -10,7 +7,7 @@ const About = () => {
              <div className='h-screen w-full bg-gradient-to-b from-gray-800 via-black to-black'>
             <div className='mx-10 flex flex-col items-center justify-between h-full px-10 md:flex-row py-20'>
              
-              <AboutImageSection image={aboutpageImage} image2={aboutpageImage2} image3={aboutpageImage3}/>
+              <AboutImageSection/>
         <div className='flex flex-col justify-center h-full mr-10'>
                     <h2 className=' text-7xl font-semibold text-white max-w-lg '>About</h2>
                     <p className='text-gray-500 py-4 max-w-lg'>Next Level MMA is a Combat Sports oriented Trust established in 2015 with a clear vision: to make Combat Sports available to the masses. Our journey began with the establishment of a premier Combat Sports training center in Saltlake, where we provide top-notch facilities and training for athletes of all levels.
