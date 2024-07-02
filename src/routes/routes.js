@@ -6,6 +6,11 @@ import AffiliationsPage from "..//pages/AffiliationsPage"
 import BlogPage from "..//pages/BlogPage"
 import ContactPage from "..//pages/ContactPage"
 import ErrorPage from "..//pages/ErrorPage"
+import GrindPage from "..//pages/GrindPage"
+import KproPage from "..//pages/KproPage"
+import EonPage from "..//pages/EonPage"
+import EryxPage from "..//pages/EryxPage"
+import IrisPage from "..//pages/IrisPage"
 
 
 const routes=createBrowserRouter([
@@ -22,7 +27,27 @@ const routes=createBrowserRouter([
         },
         {
             path:'/Events',
-            element:<EventPage/>
+            element:<EventPage/>,
+        },
+        {
+            path:'/K-Pro',
+            element:<KproPage/>
+        },
+        {
+            path:'/Eon',
+            element:<EonPage/>
+        },
+        {
+            path:'/Eryx',
+            element:<EryxPage/>
+        },
+        {
+            path:'/Iris',
+            element:<IrisPage/>
+        },
+        {
+            path:'/Grind',
+            element:<GrindPage/>
         },
         {
             path:'/Affiliations',

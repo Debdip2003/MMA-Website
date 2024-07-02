@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const SponsorAffiliattionCarousal = () => {
+const SponsorCarousal = () => {
     const settings = {
         infinite: true,
         speed: 700,
@@ -58,4 +58,4 @@ const SponsorAffiliattionCarousal = () => {
     )
 };
 
-export default SponsorAffiliattionCarousal;
+export default SponsorCarousal;

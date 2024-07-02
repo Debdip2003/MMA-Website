@@ -8,8 +8,8 @@ const AboutPage = () => {
     return (
         <>
             <Navbar />
-          <AboutUsSection/>
-          <ExpertTeamSection/>
+            <AboutUsSection />
+            <ExpertTeamSection />
             <Footer />
         </>
     )

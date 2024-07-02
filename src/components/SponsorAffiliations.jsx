@@ -1,5 +1,6 @@
 import React from 'react'
-import SponsorAffiliattionCarousal from './SponsorAffiliattionCarousal'
+import SponsorCarousal from './SponsorCarousal'
+import AffiliationCarousal from './AffiliationCarousal'
 
 const SponsorAffiliations = () => {
     return (
@@ -9,7 +10,7 @@ const SponsorAffiliations = () => {
                     <p className='text-5xl font-semibold pt-10 flex justify-center items-center mb-8'>Affiliations</p>
                 </div>
                 <div>
-                    <SponsorAffiliattionCarousal />
+                    <AffiliationCarousal/>
                 </div>
             </div>
             <div>
@@ -17,7 +18,7 @@ const SponsorAffiliations = () => {
                     <p className='text-5xl font-semibold pt-10 flex justify-center items-center mb-8'>Sponsors</p>
                 </div>
                 <div>
-                    <SponsorAffiliattionCarousal />
+                    <SponsorCarousal />
                 </div>
             </div>
 
