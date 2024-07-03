@@ -1,8 +1,8 @@
 import React from 'react';
-import aboutpageImage2 from "..//assests/aboutpageImage2.jpg"
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import sponsors from '../data/sponsor';
 
 const SponsorCarousal = () => {
     const settings = {
@@ -16,37 +16,11 @@ const SponsorCarousal = () => {
         arrows:false,
     };
 
-    const images = [
-     {
-        src: aboutpageImage2,
-     },
-     {
-        src: aboutpageImage2,
-     },
-     {
-        src: aboutpageImage2,
-     },
-     {
-        src: aboutpageImage2,
-     },
-     {
-        src: aboutpageImage2,
-     },
-     {
-        src: aboutpageImage2,
-     },
-     {
-        src: aboutpageImage2,
-     },
-     {
-        src: aboutpageImage2,
-     },
-    ];
     return (
         <div>
             <div>
                 <Slider {...settings}>
-                    {images.map((image, index) => (
+                    {sponsors.map((image, index) => (
                         <div key={index}>
                           <img src={image.src} alt='SponsorCarousal' className='w-4/5 mx-auto rounded-2xl'/>
                           

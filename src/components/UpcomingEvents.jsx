@@ -1,30 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import aboutpageImage3 from "..//assests/aboutpageImage3.jpg"
+import events from '../data/events'
 
 const UpcomingEvents = () => {
-    const eventName = [
-        {
-            id: 1,
-            title: "Grind",
-        },
-        {
-            id: 2,
-            title: "K-Pro",
-        },
-        {
-            id: 3,
-            title: "Eon",
-        },
-        {
-            id: 4,
-            title: "Eryx",
-        },
-        {
-            id: 4,
-            title: "Iris",
-        },
-    ]
 
     return (
         <div>
@@ -37,11 +16,11 @@ const UpcomingEvents = () => {
                         <div className='flex flex-col justify-center h-full pr-20 md:w-2/4 ml-10'>
                             <h2 className=' text-7xl font-semibold text-white mb-4'>Upcoming Events</h2>
                             <p className='text-gray-500 py-4'>At Next Level MMA, we're dedicated to bringing the thrill of combat sports to enthusiasts and athletes alike. Our upcoming events are designed to challenge, inspire, and showcase the best talent in the industry. Whether you're a seasoned fighter or a passionate fan, there's something for everyone. Check out our lineup of upcoming events:</p>
-                            <div className='flex w-full flex-wrap h-full md:h-1/3'>
-                                {eventName.map(({ id, title }) => {
+                            <div className='flex w-full flex-wrap h-full md:h-1/4'>
+                                {events.map(({ id, title }) => {
                                     return (
 
-                                        <div key={id} className='py-4 w-1/2 flex justify-start items-center p-2 rounded-2xl '>
+                                        <div key={id} className='py-4 w-1/4 flex justify-start items-center p-2 rounded-2xl '>
                                             <Link to={`/${title}`}>  <p className='cursor-pointer text-3xl text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white'>{title}</p></Link>
 
                                         </div>

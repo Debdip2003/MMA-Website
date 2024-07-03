@@ -1,14 +1,9 @@
 import React from 'react';
 import aboutusImage4 from "..//assests/aboutpageImage4.jpg";
+import contactInfo from '../data/contactInfo';
 
 const ExpertTeamSection = () => {
-    const contactInfo=[
-        { name: "Joy Ghosh", phone: "+91 9007154749", email: "joyghosh@gmail.com" },
-        { name: "Sourav Saha", phone: "+91 9007154750", email: "souravsaha@gmail.com" },
-        { name: "Shiba Pradhan", phone: "+91 9007154751", email: "shibapradhan@gmail.com" }
-    ]
-
-
+  
     return (
         <div className='h-screen w-full bg-gradient-to-b from-gray-800 via-black to-black'>
             <div className='text-center pt-10'>

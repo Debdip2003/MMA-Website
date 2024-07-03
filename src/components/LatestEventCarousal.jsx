@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
-import homepageImage2 from "../assests/homepageImage2.jpg";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Link } from 'react-router-dom';
+import events from '../data/events';
 
 const LatestEventCarousal = () => {
   const settings = {
@@ -14,38 +14,10 @@ const LatestEventCarousal = () => {
     slidesToScroll: 1,
   };
 
-  const images = [
-    {
-      id: 1,
-      src: homepageImage2,
-      title: "Grind",
-    },
-    {
-      id: 2,
-      src: homepageImage2,
-      title: "K-Pro",
-    },
-    {
-      id: 3,
-      src: homepageImage2,
-      title: "Eon",
-    },
-    {
-      id: 4,
-      src: homepageImage2,
-      title: "Eryx",
-    },
-    {
-      id: 5,
-      src: homepageImage2,
-      title: "Iris",
-    },
-  ];
-
   return (
     <div className='mt-24'>
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {events.map((image, index) => (
           <Link key={index} to={`/${image.title}`}>
             <div className='px-2 relative group'>
               <img
