@@ -22,7 +22,7 @@ const AffiliationCarousal = () => {
                 <Slider {...settings}>
                     {affiliations.map((image, index) => (
                         <div key={index}>
-                          <img src={image.src} alt='SponsorCarousal' className='w-4/5 mx-auto rounded-2xl'/>
+                          <img src={image.src} alt='AffiliationsCarousal' className='w-4/5 mx-auto rounded-2xl'/>
                           
                         </div>
                     ))}

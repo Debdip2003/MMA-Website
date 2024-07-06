@@ -1,71 +1,65 @@
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "..//pages/HomePage"
-import AboutPage from "..//pages/AboutPage"
-import EventPage from "..//pages/EventsPage"
-import AffiliationsPage from "..//pages/AffiliationsPage"
-import BlogPage from "..//pages/BlogPage"
-import ContactPage from "..//pages/ContactPage"
-import ErrorPage from "..//pages/ErrorPage"
-import GrindPage from "..//pages/GrindPage"
-import KproPage from "..//pages/KproPage"
-import EonPage from "..//pages/EonPage"
-import EryxPage from "..//pages/EryxPage"
-import IrisPage from "..//pages/IrisPage"
+import ErrorPage from "../pages/ErrorPage";
+import Loader from "../components/Loader";
 
+const lazyLoad = (importFunc) => (
+  <Suspense fallback={<Loader />}>
+    {React.createElement(lazy(importFunc))}
+  </Suspense>
+);
 
-const routes=createBrowserRouter([
-{
-    path:'/',
-    children:[
-        {
-            path:'/',
-            element:<HomePage/>,
-        },
-        {
-            path:'/About',
-            element:<AboutPage />
-        },
-        {
-            path:'/Events',
-            element:<EventPage/>,
-        },
-        {
-            path:'/K-Pro',
-            element:<KproPage/>
-        },
-        {
-            path:'/Eon',
-            element:<EonPage/>
-        },
-        {
-            path:'/Eryx',
-            element:<EryxPage/>
-        },
-        {
-            path:'/Iris',
-            element:<IrisPage/>
-        },
-        {
-            path:'/Grind',
-            element:<GrindPage/>
-        },
-        {
-            path:'/Affiliations',
-            element:<AffiliationsPage/>
-        },
-        {
-            path:'/Blogs',
-            element:<BlogPage/>
-        },
-        {
-            path:'/Contact',
-            element:<ContactPage/>
-        }
-        
+const routes = createBrowserRouter([
+  {
+    path: '/',
+    children: [
+      {
+        path: '/',
+        element: lazyLoad(() => import("../pages/HomePage")),
+      },
+      {
+        path: '/About',
+        element: lazyLoad(() => import("../pages/AboutPage")),
+      },
+      {
+        path: '/Events',
+        element: lazyLoad(() => import("../pages/EventsPage")),
+      },
+      {
+        path: '/Affiliations',
+        element: lazyLoad(() => import("../pages/AffiliationsPage")),
+      },
+      {
+        path: '/Blogs',
+        element: lazyLoad(() => import("../pages/BlogPage")),
+      },
+      {
+        path: '/Contact',
+        element: lazyLoad(() => import("../pages/ContactPage")),
+      },
+      {
+        path: '/Grind',
+        element: lazyLoad(() => import("../pages/GrindPage")),
+      },
+      {
+        path: '/K-Pro',
+        element: lazyLoad(() => import("../pages/KproPage")),
+      },
+      {
+        path: '/Eon',
+        element: lazyLoad(() => import("../pages/EonPage")),
+      },
+      {
+        path: '/Eryx',
+        element: lazyLoad(() => import("../pages/EryxPage")),
+      },
+      {
+        path: '/Iris',
+        element: lazyLoad(() => import("../pages/IrisPage")),
+      },
     ],
-    errorElement:<ErrorPage/>
-    },
+    errorElement: <ErrorPage />
+  },
+]);
 
-])
-
-export default routes
+export default routes;

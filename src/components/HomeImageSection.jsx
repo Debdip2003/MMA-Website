@@ -3,6 +3,7 @@ import homepageImage from "..//assests/homepageImage.jpg"
 import homepageImage2 from "..//assests/homepageImage2.jpg"
 import homepageImage3 from "..//assests/homepageImage3.jpg"
 
+
 const HomeImageSection = () => {
     return (
         <div>
@@ -20,7 +21,7 @@ const HomeImageSection = () => {
                         />
                     </div>
             <div className='overflow-hidden'>
-                <img 
+                <img
                     src={homepageImage} 
                     alt='homepageImage' 
                     className='size-[75%] mx-auto rounded-2xl max-w-lg grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'

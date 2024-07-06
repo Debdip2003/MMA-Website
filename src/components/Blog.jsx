@@ -11,7 +11,7 @@ const Blog = () => {
             </div>
             <div className='w-[30%] max-h-lg bg-gray-800 rounded-2xl p-2 px-6 flex justify-between'>
                 <div>
-                <h2 className='mb-2 text-2xl text-white'>K-PRO AMETURE 2</h2>
+                <h2 className='mb-2 text-2xl text-white'>K-Pro Ameture 2</h2>
                 <p>
                     <p className='block text-sm text-gray-500'>Thursday, April 13, 2023</p>
                 </p>
