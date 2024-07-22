@@ -19,10 +19,14 @@ const Navbar = () => {
         },
         {
             id:4,
-            link:'Affiliations',
+            link:'Players',
         },
         {
             id:5,
+            link:'Affiliations',
+        },
+        {
+            id:6,
             link:'Blogs',
         },
     ]
