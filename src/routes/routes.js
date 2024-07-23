@@ -34,6 +34,10 @@ const routes = createBrowserRouter([
         element: lazyLoad(() => import("../pages/BlogPage")),
       },
       {
+        path: '/Players',
+        element: lazyLoad(() => import("../pages/PlayerDetailsPage")),
+      },
+      {
         path: '/Contact',
         element: lazyLoad(() => import("../pages/ContactPage")),
       },
