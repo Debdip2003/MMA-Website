@@ -15,7 +15,7 @@ const ErrorPage = () => {
 The page you are looking for might be removed or is temporarily
 unavailable
 </p>
-<button className='bg-orange-600 p-4 text-white text-xl rounded-2xl' onClick={()=>navigate("/")}>
+<button className='bg-orange-600 p-3 text-white text-xl rounded-2xl' onClick={()=>navigate("/")}>
     Back to Homepage
 </button>
       </div>
