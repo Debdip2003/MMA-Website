@@ -1,8 +1,7 @@
 import React from 'react'
-import homepageImage from "..//assests/homepageImage.jpg"
+import homepageImage6 from "../assests/homepageImage6.jpg"
 import homepageImage2 from "..//assests/homepageImage2.jpg"
 import homepageImage3 from "..//assests/homepageImage3.jpg"
-
 
 const HomeImageSection = () => {
     return (
@@ -12,7 +11,7 @@ const HomeImageSection = () => {
                         <img
                         src={homepageImage2}
                         alt='homepageImage2'
-                        className='w-5/6 mb-4 mx-auto rounded-2xl max-w-lg -mr-10 grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
+                        className='w-5/6  mb-4 mx-auto rounded-2xl max-w-lg -mr-10 grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
                         />
                          <img
                         src={homepageImage3}
@@ -22,7 +21,7 @@ const HomeImageSection = () => {
                     </div>
             <div className='overflow-hidden'>
                 <img
-                    src={homepageImage} 
+                    src={homepageImage6} 
                     alt='homepageImage' 
                     className='size-[75%] mx-auto rounded-2xl max-w-lg grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
                 />

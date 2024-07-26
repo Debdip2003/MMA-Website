@@ -23,7 +23,7 @@ const LatestEventCarousal = () => {
               <img
                 src={image.src}
                 alt="EventPageCarousal"
-                className='w-full rounded-2xl grayscale group-hover:scale-105 group-hover:grayscale-0 group-hover:cursor-pointer group-hover:opacity-30 transition duration-200'
+                className='w-full h-2/3 gap-2 rounded-2xl grayscale group-hover:scale-105 group-hover:grayscale-0 group-hover:cursor-pointer group-hover:opacity-30 transition duration-200'
               />
               <div className='absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 text-white text-5xl font-semibold hover:pb-10 duration-200'>
                 {image.title}

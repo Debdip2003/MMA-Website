@@ -3,7 +3,7 @@ import React from "react";
 const ContactSection = () => {
 
   return (
-    <div className="h-screen w-full bg-gradient-to-b from-gray-800 via-black to-black flex ">
+    <div className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 flex ">
       <div className="md:w-1/2 flex justify-center items-center">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.4224166246286!2d88.41188787481218!3d22.6006958319409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275beb66b93cd%3A0xe450002abc60305d!2sNext%20Level%20MMA!5e0!3m2!1sen!2sin!4v1721451616040!5m2!1sen!2sin"

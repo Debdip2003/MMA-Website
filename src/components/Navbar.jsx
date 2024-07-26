@@ -18,10 +18,6 @@ const Navbar = () => {
             link:'Events',
         },
         {
-            id:4,
-            link:'Players',
-        },
-        {
             id:5,
             link:'Affiliations',
         },
