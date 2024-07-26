@@ -21,22 +21,22 @@ const ContactSection = () => {
         <input
           type="text"
           placeholder="Enter your Full Name"
-          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white "
+          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white text-white "
         ></input>
         <input
           type="number"
           placeholder="Enter your Phone Number"
-          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white "
+          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white  text-white"
         ></input>
         <input
           type="email"
           placeholder="Enter your Email"
-          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white"
+          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white  text-white"
         ></input>
         <textarea
           type="text"
           placeholder="Write down some comments"
-          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white"
+          className="rounded-2xl w-2/3 p-3 bg-transparent border-[1px] border-white  text-white"
           rows={10}
         ></textarea>
         <button className="bg-blue-600 p-2 w-1/5 text-xl hover:cursor-pointer hover:bg-blue-900 duration-200 rounded-2xl text-white">
