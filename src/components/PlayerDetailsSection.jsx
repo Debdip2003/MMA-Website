@@ -1,5 +1,5 @@
 import React from "react";
-import playerImage from "..//assests/playerImage.png"
+import player from "..//assests/player.jpg"
 
 const PlayerDetailsSection = () => {
   return (
@@ -14,12 +14,12 @@ const PlayerDetailsSection = () => {
           </div>
         <div className='mx-auto flex flex-col items-start justify-between h-full px-10 md:flex-row'>
             
-            <div className='w-[85%] flex justify-center items-center pt-6 ml-10 mr-20'>
-                <img src={playerImage} alt='aboutPage' className='rounded-2xl w-full h-full' />
+            <div className='w-2/3 flex justify-center items-center pt-6 ml-10 '>
+                <img src={player} alt='aboutPage' className='rounded-2xl size-[68%]' />
             </div>
-            <div className='flex flex-col items-center  h-full pr-20 md:w-1/2 '>
+            <div className='flex flex-col items-center  h-full pr-20 w-full'>
                 <h2 className=' text-5xl font-semibold text-white max-w-lg flex items-center'>ISHAN DAS</h2>
-                <div className='text-gray-500 py-4 max-w-lg flex flex-col justify-start'>
+                <div className='text-gray-500 py-4 max-w-lg flex flex-col justify-start mt-6'>
                    <p><span className="text-white">NICK NAME:</span> Box-Man</p>
                    <p><span className="text-white">BIRTHPLACE:</span> Kolkata, West Bengal</p>
                    <p><span className="text-white">DATE OF BIRTH:</span> 18/01/1993</p>

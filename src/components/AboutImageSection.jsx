@@ -1,7 +1,7 @@
 import React from 'react'
 import aboutpageImage from "..//assests/aboutpageImage.jpg"
-import aboutpageImage2 from "..//assests/aboutpageImage2.jpg"
-import aboutpageImage3 from "..//assests/aboutpageImage3.jpg"
+import aboutpageImage6 from "..//assests/aboutpageImage6.jpg"
+import aboutpageImage7 from "..//assests/aboutpageImage7.jpg"
 
 
 const AboutImageSection = ()=> {
@@ -10,12 +10,12 @@ const AboutImageSection = ()=> {
               <div className='flex justify-center items-center h-screen -ml-40'>
                     <div>
                         <img
-                        src={aboutpageImage2}
+                        src={aboutpageImage6}
                         alt='homepageImage2'
                         className='w-5/6 mb-6 mx-auto rounded-2xl max-w-lg -mr-10 grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
                         />
                          <img
-                        src={aboutpageImage3}
+                        src={aboutpageImage7}
                         alt='homepageImage2'
                         className='w-5/6 mx-auto rounded-2xl max-w-lg -mr-10 grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
                         />

@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutpageImage3 from "..//assests/aboutpageImage3.jpg"
+import blogImage1 from "../assests/blogImage1.jpg"
 
 const BlogSection = () => {
     return (
@@ -14,7 +14,7 @@ const BlogSection = () => {
                         <p className='text-gray-500 w-fit'>Popular Blog Tags: <span className='text-white ml-4'>#k-pro</span></p>
                     </div>
                     <div className='md:h-full md:w-1/2 flex items-center justify-center'>
-                        <img src={aboutpageImage3} alt='aboutPage' className='rounded-2xl grayscale w-full md:w-[90%] hover:cursor-pointer hover:grayscale-0 hover:scale-105 duration-200' />
+                        <img src={blogImage1} alt='aboutPage' className='rounded-2xl grayscale w-full md:w-[90%] hover:cursor-pointer hover:grayscale-0 hover:scale-105 duration-200' />
                     </div>
                 </div>
             </div>
