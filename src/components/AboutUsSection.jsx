@@ -1,5 +1,5 @@
 import React from "react";
-import aboutpageImage4 from "..//assests/aboutpageImage4.jpg";
+import aboutpageImage5 from "..//assests/aboutpageImage5.jpg"
 
 const AboutUsSection = () => {
   return (
@@ -8,7 +8,7 @@ const AboutUsSection = () => {
         <div className="mx-auto flex flex-col items-center justify-between h-full px-10 md:flex-row">
           <div className="md:h-full md:w-1/2 flex items-center justify-center">
             <img
-              src={aboutpageImage4}
+              src={aboutpageImage5}
               alt="aboutPage"
               className="rounded-2xl grayscale w-full md:w-[95%] hover:cursor-pointer hover:grayscale-0 hover:scale-105 duration-200"
             />
