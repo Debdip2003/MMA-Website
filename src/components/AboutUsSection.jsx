@@ -18,7 +18,7 @@ const AboutUsSection = () => {
               Who are we?
             </h2>
             <p className="text-gray-500 py-4 max-w-lg">
-              Next Level MMA is a Trust (NPO) created to promote Comat Sports in
+              Next Level MMA is a Trust (NPO) created to promote Combat Sports in
               West Bengal. We are registered under West Bengal Registration
               Rules 1962. We aim to make Kolkata the Combat Sports capital of
               India. We plan to achieve this by establishing multiple martial
