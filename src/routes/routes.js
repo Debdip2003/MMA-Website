@@ -11,58 +11,58 @@ const lazyLoad = (importFunc) => (
 
 const routes = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     children: [
       {
-        path: '/',
+        path: "/",
         element: lazyLoad(() => import("../pages/HomePage")),
       },
       {
-        path: '/About',
+        path: "/about",
         element: lazyLoad(() => import("../pages/AboutPage")),
       },
       {
-        path: '/Events',
+        path: "/events",
         element: lazyLoad(() => import("../pages/EventsPage")),
       },
       {
-        path: '/Affiliations',
+        path: "/affiliations",
         element: lazyLoad(() => import("../pages/AffiliationsPage")),
       },
       {
-        path: '/Blogs',
+        path: "/blogs",
         element: lazyLoad(() => import("../pages/BlogPage")),
       },
       {
-        path: '/Players',
+        path: "/players",
         element: lazyLoad(() => import("../pages/PlayerDetailsPage")),
       },
       {
-        path: '/Contact',
+        path: "/contact",
         element: lazyLoad(() => import("../pages/ContactPage")),
       },
       {
-        path: '/Grind',
+        path: "/grind",
         element: lazyLoad(() => import("../pages/GrindPage")),
       },
       {
-        path: '/K-Pro',
+        path: "/kpro",
         element: lazyLoad(() => import("../pages/KproPage")),
       },
       {
-        path: '/Eon',
+        path: "/eon",
         element: lazyLoad(() => import("../pages/EonPage")),
       },
       {
-        path: '/Eryx',
+        path: "/eryx",
         element: lazyLoad(() => import("../pages/EryxPage")),
       },
       {
-        path: '/Iris',
+        path: "/iris",
         element: lazyLoad(() => import("../pages/IrisPage")),
       },
     ],
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
   },
 ]);
 
