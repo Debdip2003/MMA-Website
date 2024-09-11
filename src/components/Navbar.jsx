@@ -1,28 +1,28 @@
 import React from "react";
-import logo from "..//assests/logo.jpg";
+import logo from "../assests/logo.jpg"; // Fixed the relative path
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const links = [
     {
       id: 1,
-      link: "home",
+      link: 'Home',
     },
     {
       id: 2,
-      link: "about",
+      link: 'About',
     },
     {
       id: 3,
-      link: "events",
+      link: 'Events',
     },
-    {
-      id: 5,
-      link: "affiliations",
-    },
+    // {
+    //   id: 5,
+    //   link: 'Affiliations',
+    // },
     {
       id: 6,
-      link: "blogs",
+      link: 'Blogs',
     },
   ];
 
@@ -36,20 +36,18 @@ const Navbar = () => {
         />
       </div>
       <ul className="flex justify-center items-center h-full">
-        {links.map(({ id, link }) => {
-          return (
-            <li
-              className="px-4 cursor-pointer text-xl text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white"
-              key={id}
-            >
-              <Link to={link === "home" ? "/" : `/${link}`}>{link}</Link>
-            </li>
-          );
-        })}
+        {links.map(({ id, link }) => (
+          <li
+            className="px-4 cursor-pointer text-xl text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white"
+            key={id}
+          >
+            <Link to={link === "Home" ? "/" : `/${link.toLowerCase()}`}>{link}</Link>
+          </li>
+        ))}
       </ul>
       <div>
         <span className="px-4 cursor-pointer text-xl text-gray-400 font-medium hover:scale-105 duration-200 hover:text-white">
-          <Link to={"/Contact"}>Contact Us</Link>
+          <Link to="/Contact">Contact Us</Link>
         </span>
       </div>
     </div>

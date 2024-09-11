@@ -1,29 +1,17 @@
-import aboutpageImage2 from "..//assests/aboutpageImage2.jpg"
+import sponsorImage1 from "..//assests/sponsorImage1.jpeg"
 
 const sponsors = [
     {
-       src: aboutpageImage2,
+      id: 1,
+      src: sponsorImage1,
     },
     {
-       src: aboutpageImage2,
+      id: 2,
+      src: sponsorImage1,
     },
     {
-       src: aboutpageImage2,
-    },
-    {
-       src: aboutpageImage2,
-    },
-    {
-       src: aboutpageImage2,
-    },
-    {
-       src: aboutpageImage2,
-    },
-    {
-       src: aboutpageImage2,
-    },
-    {
-       src: aboutpageImage2,
+      id: 3,
+      src: sponsorImage1,
     },
    ];
 

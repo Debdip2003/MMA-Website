@@ -1,36 +1,21 @@
-import aboutpageImage2 from "..//assests/aboutpageImage2.jpg"
+import affiliationImage1 from "..//assests/affiliationImage1.jpg"
+import affiliationImage2 from "..//assests/affiliationImage2.jpg"
+import affiliationImage3 from "..//assests/affiliationImage3.jpg"
+
 
 const affiliations = [
    {
       id: 1,
-      src: aboutpageImage2,
-      place: "West Bengal"
+      src: affiliationImage1,
    },
    {
       id: 2,
-      src: aboutpageImage2,
-      place: "Maharashtra"
+      src: affiliationImage2,
    },
    {
       id: 3,
-      src: aboutpageImage2,
-      place: "West Bengal"
-   },
-   {
-      id: 4,
-      src: aboutpageImage2,
-      place: "Maharashtra"
-   },
-   {
-      id: 5,
-      src: aboutpageImage2,
-      place: "Madhya Pradesh"
-   },
-   {
-      id: 6,
-      src: aboutpageImage2,
-      place: "Madhya Pradesh"
-   },
+      src: affiliationImage3,
+   }
 ];
 
 export default affiliations
