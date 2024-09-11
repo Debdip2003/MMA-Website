@@ -17,10 +17,10 @@ const Navbar = () => {
             id:3,
             link:'Events',
         },
-        {
-            id:5,
-            link:'Affiliations',
-        },
+        // {
+        //     id:5,
+        //     link:'Affiliations',
+        // },
         {
             id:6,
             link:'Blogs',

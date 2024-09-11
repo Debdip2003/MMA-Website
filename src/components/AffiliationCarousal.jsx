@@ -6,7 +6,7 @@ const AffiliationCarousal = () => {
     const settings = {
         infinite: true,
         speed: 700,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,  
@@ -22,7 +22,7 @@ const AffiliationCarousal = () => {
                 <Slider {...settings}>
                     {affiliations.map((image, index) => (
                         <div key={index}>
-                          <img src={image.src} alt='AffiliationsCarousal' className='w-4/5 mx-auto rounded-2xl'/>
+                          <img src={image.src} alt='AffiliationsCarousal' className='w-3/5 mx-auto rounded-2xl'/>
                           
                         </div>
                     ))}
