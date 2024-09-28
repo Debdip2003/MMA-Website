@@ -11,7 +11,7 @@ const Eryx = () => {
                 </div>
                 <div className='flex flex-col justify-center h-full pr-20 md:w-2/4 ml-10'>
                     <h2 className=' text-7xl font-semibold text-white mb-4'>Eryx</h2>
-                    <p className='text-gray-500 py-4 mb-4 text-3xl'>Stay tuned for updates!</p>
+                    <p className='text-gray-500 py-4 mb-4 text-xl'>ERYX is a Professional Boxing promotion based out of Kolkata, West Bengal.</p>
                 </div>
             </div>
         </div>
