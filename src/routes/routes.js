@@ -41,18 +41,18 @@ const routes = createBrowserRouter([
         path: "/contact",
         element: lazyLoad(() => import("../pages/ContactPage")),
       },
-      // {
-      //   path: "/grind",
-      //   element: lazyLoad(() => import("../pages/GrindPage")),
-      // },
+      {
+        path: "/grind",
+        element: lazyLoad(() => import("../pages/GrindPage")),
+      },
       {
         path: "/kpro",
         element: lazyLoad(() => import("../pages/KproPage")),
       },
-      // {
-      //   path: "/eon",
-      //   element: lazyLoad(() => import("../pages/EonPage")),
-      // },
+      {
+        path: "/eon",
+        element: lazyLoad(() => import("../pages/EonPage")),
+      },
       {
         path: "/eryx",
         element: lazyLoad(() => import("../pages/EryxPage")),
