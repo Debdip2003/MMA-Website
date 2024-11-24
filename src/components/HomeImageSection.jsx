@@ -1,34 +1,46 @@
-import React from 'react'
-import homepageImage6 from "../assests/homepageImage6.jpg"
-import homepageImage2 from "..//assests/homepageImage2.jpg"
-import homepageImage3 from "..//assests/homepageImage3.jpg"
+import React from "react";
+import homepageImage6 from "../assests/homepageImage6.jpg";
+import homepageImage2 from "../assests/homepageImage2.jpg";
+import homepageImage3 from "../assests/homepageImage3.jpg";
 
 const HomeImageSection = () => {
-    return (
-        <div>
-               <div className='flex justify-center items-center h-screen '>
-                    <div>
-                        <img
-                        src={homepageImage2}
-                        alt='homepageImage2'
-                        className='w-5/6  mb-4 mx-auto rounded-2xl max-w-lg -mr-10 grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
-                        />
-                         <img
-                        src={homepageImage3}
-                        alt='homepageImage2'
-                        className='w-5/6 mx-auto rounded-2xl max-w-lg -mr-10 grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
-                        />
-                    </div>
-            <div className='overflow-hidden'>
-                <img
-                    src={homepageImage6} 
-                    alt='homepageImage' 
-                    className='size-[75%] mx-auto rounded-2xl max-w-lg grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 hover:rounded-2xl duration-200'
-                />
-            </div>
+  return (
+    <div className="py-8 md:py-16">
+      {/* Mobile View - Only one image */}
+      <div className="flex md:hidden justify-center items-center h-full">
+        <div className="w-4/5 max-w-xs overflow-hidden">
+          <img
+            src={homepageImage6}
+            alt="homepageImage"
+            className="w-full rounded-2xl grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 duration-200"
+          />
         </div>
-        </div>
-    )
-}
+      </div>
 
-export default HomeImageSection
+      {/* Desktop View - Show all three images */}
+      <div className="hidden md:flex justify-center items-center h-full space-x-8">
+        <div className="flex flex-col items-center space-y-4">
+          <img
+            src={homepageImage2}
+            alt="homepageImage2"
+            className="w-96 max-w-lg rounded-2xl grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 duration-200"
+          />
+          <img
+            src={homepageImage3}
+            alt="homepageImage3"
+            className="w-96 max-w-lg rounded-2xl grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 duration-200"
+          />
+        </div>
+        <div className="w-96 max-w-lg overflow-hidden">
+          <img
+            src={homepageImage6}
+            alt="homepageImage6"
+            className="w-full rounded-2xl grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-105 duration-200"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomeImageSection;

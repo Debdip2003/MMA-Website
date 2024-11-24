@@ -1,28 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import eventpageImage2 from "..//assests/eventpageImage2.jpg"
-
+import eventpageImage2 from "../assests/eventpageImage2.jpg";
 const KPro = () => {
   return (
-    <div>
-      <div className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
-        <div className="mx-auto flex flex-col items-center justify-between h-full px-10 md:flex-row">
-          <div className="md:h-full md:w-1/2 flex items-center justify-center">
-            <img
-              src={eventpageImage2}
-              alt="aboutPage"
-              className="rounded-2xl grayscale w-full md:w-[90%] hover:cursor-pointer hover:grayscale-0 hover:scale-105 duration-200"
-            />
-          </div>
-          <div className="flex flex-col justify-center h-full pr-20 md:w-2/4 ml-10">
-            <h2 className=" text-7xl font-semibold text-white mb-4">K-Pro</h2>
-            <p className="text-gray-500 py-4 mb-4 text-xl">
-            K-PRO is a striking promotion started in 2021. The promotion hosts Amateur, Pro-AM and Professional events. K-PRO works at a grassroot level and aims to provide a platform for all Striking Martial Arts practitioners.
-            </p>
-            <p className="w-1/3 text-gray-500 py-4 mb-4 hover:underline hover:text-white underline-offset-4 duration-200">
-              <Link to={"/Players"}>Click here to see all players!</Link>
-            </p>
-          </div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 px-4 md:px-10 py-10">
+      <div className="mx-auto flex flex-col-reverse md:flex-row items-center justify-between h-full gap-8 md:gap-0">
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 flex items-center justify-center">
+          <img
+            src={eventpageImage2}
+            alt="aboutPage"
+            className="rounded-2xl grayscale w-full sm:w-3/4 md:w-[90%] hover:cursor-pointer hover:grayscale-0 hover:scale-105 duration-200"
+          />
+        </div>
+
+        {/* Text Section */}
+        <div className="flex flex-col justify-center h-full md:w-2/4 text-center md:text-left px-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-4">
+            K-Pro
+          </h2>
+          <p className="text-gray-500 text-sm sm:text-base md:text-xl py-4 mb-4">
+            K-PRO is a striking promotion started in 2021. The promotion hosts
+            Amateur, Pro-AM, and Professional events. K-PRO works at a
+            grassroots level and aims to provide a platform for all Striking
+            Martial Arts practitioners.
+          </p>
+          <p className="w-full md:w-1/3 text-gray-500 py-4 mb-4 hover:underline hover:text-white underline-offset-4 duration-200">
+            <Link to="/Players">Click here to see all players!</Link>
+          </p>
         </div>
       </div>
     </div>
