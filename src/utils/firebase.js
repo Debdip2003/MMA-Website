@@ -1,11 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
+const firebaseConfig1 = {
   apiKey: "AIzaSyCtaB7EfPy5bpR_nTOLyexHkQmScbHZCes",
   authDomain: "mma-website-contact-from.firebaseapp.com",
   projectId: "mma-website-contact-from",
@@ -14,9 +10,26 @@ const firebaseConfig = {
   appId: "1:212611549597:web:67034bf040b54d41400774",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const firebaseConfig2 = {
+  apiKey: "AIzaSyDUDhjRhvF-WLvgcH6zrOvfeIdC7yArTfg",
+  authDomain: "player-details-c6ea7.firebaseapp.com",
+  projectId: "player-details-c6ea7",
+  storageBucket: "player-details-c6ea7.firebasestorage.app",
+  messagingSenderId: "594573948283",
+  appId: "1:594573948283:web:0c0ebf21ddf78a2370f9de",
+  measurementId: "G-13JNTYGQLR",
+};
 
-const db = getFirestore(app);
+// Initialize Firebase for the main app
+const app1 =
+  getApps().find((app) => app.name === "main-app") ||
+  initializeApp(firebaseConfig1, "main-app");
+const db = getFirestore(app1);
 
-export { db };
+// Initialize Firebase for the player details app
+const app2 =
+  getApps().find((app) => app.name === "player-app") ||
+  initializeApp(firebaseConfig2, "player-app");
+const playerDb = getFirestore(app2);
+
+export { db, playerDb };

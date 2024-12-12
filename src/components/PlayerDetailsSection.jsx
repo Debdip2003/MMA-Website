@@ -1,68 +1,72 @@
-import React from "react";
-import player from "../assests/player.jpg";
-const PlayerDetailsSection = () => {
-  return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 px-4 md:px-10 py-10">
-      <div className="w-full pt-6  mb-14 flex justify-center items-center">
-        <input
-          type="text"
-          placeholder="Search for players"
-          className="w-full sm:w-2/3 md:w-1/3 p-2 rounded-xl"
-        />
-      </div>
-      <div className="mx-auto flex flex-col-reverse md:flex-row items-center justify-between h-full gap-8 md:gap-0">
-        {/* Image Section */}
-        <div className="w-full md:w-2/3 flex justify-center items-center pt-6 md:pt-0">
-          <img
-            src={player}
-            alt="Player"
-            className="rounded-2xl w-3/4 sm:w-2/3 md:w-3/4 lg:w-[68%] hover:scale-105 duration-200"
-          />
-        </div>
+import React, { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { playerDb } from "../utils/firebase";
+import SearchBar from "./SearchBar";
+import PlayerList from "./PlayerList";
 
-        {/* Player Info Section */}
-        <div className="flex flex-col justify-center items-center h-full md:w-2/4 text-center md:text-left px-4 md:px-10">
-          <h2 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
-            JOSIM SK
-          </h2>
-          <div className="text-gray-500 py-4 max-w-lg flex flex-col justify-start mt-2 text-xl">
-            <p>
-              <span className="text-white">NICK NAME:</span> Scorpion
-            </p>
-            <p>
-              <span className="text-white">BIRTHPLACE:</span> Beldanga, West
-              Bengal
-            </p>
-            <p>
-              <span className="text-white">DATE OF BIRTH:</span> 28.07.2005
-            </p>
-            <p>
-              <span className="text-white">HEIGHT:</span> 5'9"
-            </p>
-            <p>
-              <span className="text-white">WEIGHT:</span> 52kg
-            </p>
-            <p>
-              <span className="text-white">NUMBER OF PROFESSIONAL FIGHTS:</span>{" "}
-              2
-            </p>
-            <p>
-              <span className="text-white">WIN:</span> 2
-            </p>
-            <p>
-              <span className="text-white">DEFEAT:</span> 0
-            </p>
-            <p>
-              <span className="text-white">NUMBER OF KNOCKOUTS:</span> 1
-            </p>
-            <p>
-              <span className="text-white">COACH:</span> Samim Ahmed
-            </p>
-            <p>
-              <span className="text-white">CLUB:</span> MMA Murshidabad
-            </p>
-          </div>
-        </div>
+const PlayerDetailsSection = () => {
+  const [players, setPlayers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Fetch data from Firestore
+  useEffect(() => {
+    const fetchPlayers = async () => {
+      setIsLoading(true);
+      try {
+        const querySnapshot = await getDocs(
+          collection(playerDb, "player-details")
+        );
+        const playerData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          firstName: doc.data().firstName,
+          lastName: doc.data().lastName,
+          nickName: doc.data().nickName,
+          picture: doc.data().picture,
+          weightClass: doc.data().weightClass,
+          height: doc.data().height,
+          reach: doc.data().reach,
+          birthPlace: doc.data().birthPlace,
+          club: doc.data().club,
+          coach: doc.data().coach,
+          dateofBirth: doc.data().dateofBirth,
+          numberofFights: doc.data().numberofFights,
+          numberofKnockouts: doc.data().numberofKnockouts,
+          weight: doc.data().weight,
+          wins: doc.data().wins,
+          losses: doc.data().losses,
+        }));
+        setPlayers(playerData);
+      } catch (error) {
+        console.error("Error fetching players:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPlayers();
+  }, []);
+
+  // Filter players based on search term
+  const filteredPlayers = players.filter((player) => {
+    const firstName = player.firstName || "";
+    const lastName = player.lastName || "";
+
+    return (
+      firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      lastName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+
+  return (
+    <div className="flex flex-col h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white">
+      <SearchBar onSearch={setSearchTerm} />
+      <div className="flex flex-col md:flex-row flex-grow gap-6 p-6">
+        {isLoading ? (
+          <p className="w-full text-center">Loading...</p>
+        ) : (
+          <PlayerList players={filteredPlayers} />
+        )}
       </div>
     </div>
   );
