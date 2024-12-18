@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import logo from "../assests/logo.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const links = [
     { id: 1, link: "Home" },
@@ -15,8 +17,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-16 bg-black flex justify-between items-center px-4 md:px-8">
-      <div>
+    <div className="w-full h-16 bg-black flex justify-between items-center px-4 py-10 md:px-8">
+      <div onClick={() => navigate("/")}>
         <img
           src={logo}
           alt="logo"
