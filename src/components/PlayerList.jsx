@@ -55,34 +55,6 @@ const PlayerList = ({ players }) => {
                   </div>
                 </div>
               </li>
-              <li
-                key={player.id}
-                className="cursor-pointer p-3 px-6 w-8/12 bg-gray-800 hover:bg-gray-700 rounded-xl "
-              >
-                <div className="flex  justify-around w-full md:flex-row items-center gap-6 flex-col">
-                  <h3 className="text-xl font-semibold text-white md:w-[30%]">
-                    {player.firstName} {player.lastName}
-                  </h3>
-                  <div className="flex justify-between md:w-[40%] gap-4 text-sm text-gray-400">
-                    <p>
-                      <span className="font-medium text-white">Gender:</span>{" "}
-                      {player.gender}
-                    </p>
-                    <p>
-                      <span className="font-medium text-white">Weight:</span>{" "}
-                      {player.weightClass}
-                    </p>
-                    <p>
-                      <span className="font-medium text-white">Wins:</span>{" "}
-                      {player.wins}
-                    </p>
-                    <p>
-                      <span className="font-medium text-white">Losses:</span>{" "}
-                      {player.losses}
-                    </p>
-                  </div>
-                </div>
-              </li>
             </>
 
             // <li

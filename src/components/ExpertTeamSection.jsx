@@ -6,7 +6,7 @@ const ExpertTeamSection = () => {
     <div className="min-h-screen w-full bg-gradient-to-b from-gray-800 via-black to-black">
       <div className="text-center pt-6">
         <p className="text-4xl md:text-5xl lg:text-7xl font-semibold text-white">
-          Our Expert Team
+          The Team
         </p>
       </div>
       <div className="mt-8 md:mt-16 px-4 md:px-10 flex flex-wrap items-center justify-center gap-8">
@@ -22,8 +22,6 @@ const ExpertTeamSection = () => {
             />
             <div className="flex flex-col items-center text-white">
               <p className="text-xl md:text-2xl font-semibold">{member.name}</p>
-              <p className="text-sm md:text-base">{member.phone}</p>
-              <p className="text-sm md:text-base">{member.email}</p>
             </div>
           </div>
         ))}

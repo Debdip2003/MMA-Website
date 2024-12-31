@@ -1,8 +1,8 @@
 // import eventpageImage1 from "..//assests/eventPageImage1.jpg";
 import eventpageImage2 from "../assests/eventpageImage2.jpg";
 // import eventpageImage3 from "..//assests/eventpageImage3.jpg";
-import eventpageImage4 from "..//assests/eventpageImage4.jpg";
-import eventpageImage5 from "..//assests/eventpageImage5.jpg";
+import eventpageImage4 from "..//assests/eryx.jpg";
+import eventpageImage5 from "..//assests/iris.jpg";
 
 const events = [
   // {

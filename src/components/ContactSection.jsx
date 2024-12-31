@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../utils/firebase";
-
+import { maindb } from "../utils/firebase";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
 const ContactSection = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -9,47 +10,48 @@ const ContactSection = () => {
   const [comment, setComment] = useState("");
   const [isSubmit, setisSubmit] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // SUBMIT FORM
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    const isEmailValid =
-      /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email);
+  //   const isEmailValid =
+  //     /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email);
 
-    const isPhoneNumberValid = /^\d{10}$/.test(phoneNumber);
+  //   const isPhoneNumberValid = /^\d{10}$/.test(phoneNumber);
 
-    if (!name) return alert("Please Enter your Name");
-    if (!isPhoneNumberValid) return alert("Please Enter a Proper Phone Number");
-    if (!isEmailValid) return alert("Please Enter a Proper Email");
-    if (!comment) return alert("Please Enter your message");
+  //   if (!name) return alert("Please Enter your Name");
+  //   if (!isPhoneNumberValid) return alert("Please Enter a Proper Phone Number");
+  //   if (!isEmailValid) return alert("Please Enter a Proper Email");
+  //   if (!comment) return alert("Please Enter your message");
 
-    console.log("message sent");
+  //   console.log("message sent");
 
-    writeUserData(name, email, phoneNumber, comment);
-  };
+  //   writeUserData(name, email, phoneNumber, comment);
+  // };
 
-  async function writeUserData(name, email, phoneNumber, comment) {
-    setisSubmit(true);
-    try {
-      const docRef = await addDoc(collection(db, "contacts"), {
-        name: name,
-        email: email,
-        phoneNumber: phoneNumber,
-        comment: comment,
-      });
+  // async function writeUserData(name, email, phoneNumber, comment) {
+  //   setisSubmit(true);
+  //   try {
+  //     const docRef = await addDoc(collection(maindb, "contacts"), {
+  //       name: name,
+  //       email: email,
+  //       phoneNumber: phoneNumber,
+  //       comment: comment,
+  //     });
 
-      console.log("Document written with ID: ", docRef.id);
-      alert("Message has been sent!");
-      setName("");
-      setEmail("");
-      setPhoneNumber("");
-      setComment("");
-      setisSubmit(false);
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      alert(error.message);
-      setisSubmit(false);
-    }
-  }
+  //     console.log("Document written with ID: ", docRef.id);
+  //     alert("Message has been sent!");
+  //     setName("");
+  //     setEmail("");
+  //     setPhoneNumber("");
+  //     setComment("");
+  //     setisSubmit(false);
+  //   } catch (error) {
+  //     console.error("Error adding document: ", error);
+  //     alert(error.message);
+  //     setisSubmit(false);
+  //   }
+  // }
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 flex flex-col md:flex-row">
@@ -65,7 +67,7 @@ const ContactSection = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div className="flex flex-col justify-center items-center gap-4 p-4 md:w-1/2">
+      {/* <div className="flex flex-col justify-center items-center gap-4 p-4 md:w-1/2">
         <h1 className="text-2xl md:text-4xl mb-4 text-white">
           Send Us a Message
         </h1>
@@ -103,6 +105,26 @@ const ContactSection = () => {
         >
           Submit
         </button>
+      </div> */}
+      <div className="flex flex-col justify-center items-start gap-4 p-4 md:w-1/2  text-white">
+        <p className="text-4xl">Contact Us</p>
+        <p className="">
+          {" "}
+          Address: 669, A.E. Block sector 1, AE Block, Sector 1, Bidhannagar,
+          Kolkata, West Bengal 700064
+        </p>
+        <p className="flex">
+          <FaPhoneAlt className="text-2xl mx-3 pt-2" />
+          9831585746
+        </p>
+        <p className="flex">
+          <FaWhatsapp className="text-2xl mx-3 pt-2" />
+          9831585746
+        </p>
+        <p className="flex">
+          <CiMail className="text-2xl mx-3 pt-2" />
+          nextlevelmmatrust@gmail.com
+        </p>
       </div>
     </div>
   );

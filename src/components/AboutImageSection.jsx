@@ -1,6 +1,6 @@
 import React from "react";
 import aboutpageImage from "../assests/aboutpageImage.jpg";
-import aboutpageImage6 from "../assests/aboutpageImage6.jpg";
+import aboutpageImage6 from "../assests/aboutpageImage2.jpg";
 import aboutpageImage7 from "../assests/aboutpageImage7.jpg";
 
 const AboutImageSection = () => {

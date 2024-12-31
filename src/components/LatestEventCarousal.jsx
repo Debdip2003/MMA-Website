@@ -29,7 +29,7 @@ const LatestEventCarousal = () => {
     <div className="mt-24">
       <Slider {...settings}>
         {events.map((image, index) => (
-          <Link key={index} to={`/${image.title}`}>
+          <Link key={index} to={`/${image.link}`}>
             <div className="px-2 relative group">
               <img
                 src={image.src}
