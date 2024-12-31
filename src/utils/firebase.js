@@ -1,6 +1,16 @@
 import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyAMigt2aMrTEgsAPgX5_AGa5yzAjzm5LTk",
+  authDomain: "website-4599c.firebaseapp.com",
+  projectId: "website-4599c",
+  storageBucket: "website-4599c.firebasestorage.app",
+  messagingSenderId: "185870264715",
+  appId: "1:185870264715:web:c8c3b9b0c5bdff2bee678e",
+  measurementId: "G-963H7184WV",
+};
+
 const firebaseConfig1 = {
   apiKey: "AIzaSyCtaB7EfPy5bpR_nTOLyexHkQmScbHZCes",
   authDomain: "mma-website-contact-from.firebaseapp.com",
@@ -26,10 +36,11 @@ const app1 =
   initializeApp(firebaseConfig1, "main-app");
 const db = getFirestore(app1);
 
-// Initialize Firebase for the player details app
-const app2 =
-  getApps().find((app) => app.name === "player-app") ||
-  initializeApp(firebaseConfig2, "player-app");
-const playerDb = getFirestore(app2);
+// main db
 
-export { db, playerDb };
+const app =
+  getApps().find((app) => app.name === "player-app") ||
+  initializeApp(firebaseConfig, "player-app");
+const maindb = getFirestore(app);
+
+export { maindb, db };

@@ -26,7 +26,7 @@ const KPro = () => {
             Martial Arts practitioners.
           </p>
           <p className="w-full md:w-1/3 text-gray-500 py-4 mb-4 hover:underline hover:text-white underline-offset-4 duration-200">
-            <Link to="/Players">Click here to see all players!</Link>
+            <Link to="/players">Click here to see all players!</Link>
           </p>
         </div>
       </div>

@@ -38,6 +38,10 @@ const routes = createBrowserRouter([
         element: lazyLoad(() => import("../pages/PlayerDetailsPage")),
       },
       {
+        path: "/players/:id",
+        element: lazyLoad(() => import("../pages/PlayerPersonalDetails")),
+      },
+      {
         path: "/contact",
         element: lazyLoad(() => import("../pages/ContactPage")),
       },

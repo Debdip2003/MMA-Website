@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { playerDb } from "../utils/firebase";
+import { maindb } from "../utils/firebase";
 import SearchBar from "./SearchBar";
 import PlayerList from "./PlayerList";
 
@@ -15,8 +15,9 @@ const PlayerDetailsSection = () => {
       setIsLoading(true);
       try {
         const querySnapshot = await getDocs(
-          collection(playerDb, "player-details")
+          collection(maindb, "player-details")
         );
+        console.log(querySnapshot.docs);
         const playerData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           firstName: doc.data().firstName,
@@ -27,6 +28,7 @@ const PlayerDetailsSection = () => {
           height: doc.data().height,
           reach: doc.data().reach,
           birthPlace: doc.data().birthPlace,
+          gender: doc.data().gender,
           club: doc.data().club,
           coach: doc.data().coach,
           dateofBirth: doc.data().dateofBirth,
