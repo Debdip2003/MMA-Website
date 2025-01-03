@@ -28,14 +28,17 @@ const PlayerList = ({ players }) => {
             <>
               <li
                 key={player.id}
-                className="cursor-pointer p-3 px-6 w-8/12 bg-gray-800 hover:bg-gray-700 rounded-xl "
+                className="cursor-pointer p-3 px-6 w-8/12 bg-gray-800 hover:bg-gray-700 rounded-xl overflow-hidden"
                 onClick={() => navigate(`/players/${player.id}`)}
               >
-                <div className="flex  justify-around w-full md:flex-row items-center gap-6 flex-col">
-                  <h3 className="text-xl font-semibold text-white md:w-[30%]">
+                <div className="flex flex-wrap justify-around w-full md:flex-row items-center gap-6 flex-col">
+                  <h3 className="text-xl portrait:text-lg flex-1 flex-wrap flex justify-between gap-6 font-semibold text-white md:w-[30%]">
                     {player.firstName} {player.lastName}
+                    <div className="text-sm text-gray-400 pt-1 landscape:hidden">
+                      {player.numberofFights}-{player.wins}-{player.losses}
+                    </div>
                   </h3>
-                  <div className="flex justify-between md:w-[40%] gap-4 text-sm text-gray-400">
+                  <div className="flex justify-between md:w-[40%] gap-4 text-sm text-gray-400 portrait:hidden">
                     <p>
                       <span className="font-medium text-white">Gender:</span>{" "}
                       {player.gender}

@@ -9,7 +9,7 @@ const About = () => {
           <AboutImageSection />
           <div className="flex flex-col justify-center h-full mr-10">
             <h2 className="text-5xl md:text-7xl font-semibold text-white max-w-lg mb-6 text-center">
-              About
+              About Us
             </h2>
             <p className="text-gray-500 py-4 max-w-lg text-sm sm:text-base md:text-lg lg:text-xl">
               Next Level MMA is a Non-Profit Trust registered under West Bengal

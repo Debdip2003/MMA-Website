@@ -10,7 +10,7 @@ const Home = () => {
             Welcome to Next Level MMA
           </h2>
           <p className="text-gray-500 py-4 max-w-lg text-sm sm:text-base md:text-lg lg:text-xl">
-            At Next Level MMA, we are dedicated to making Combat Sports
+            {/* At Next Level MMA, we are dedicated to making Combat Sports
             accessible to everyone. Since our inception in 2015, we have been at
             the forefront of promoting and developing Combat Sports through our
             state-of-the-art training center located in Saltlake. We proudly
@@ -19,7 +19,15 @@ const Home = () => {
             mission is to foster an ecosystem where Combat Sports Athletes,
             Teachers, Clubs, and related entities can thrive. Join us in our
             journey to elevate Combat Sports to new heights and make it a staple
-            in the lives of enthusiasts and professionals alike.
+            in the lives of enthusiasts and professionals alike. */}
+            At Next Level MMA, we are dedicated to create a Combat Sports
+            Ecosystem in Eastern India. The Ecosystem includes Combat Sports
+            Athletes, Coaches, Clubs, Events, Equipment Manufacturers, Center of
+            Excellence, Health Clubs, University etc. Through the ecosystem we
+            want to create a Combat Sports Industry that will benefit all its
+            stakeholders. We want to oversee a lot of Combat Sports relatated
+            activities around Bengal and East India. Our aim is to make Kolkata,
+            the Combat Sports Capital of India.
           </p>
         </div>
         <div className="w-full mt-6 md:mt-0 md:w-auto">
