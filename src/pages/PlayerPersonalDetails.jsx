@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { maindb } from "../utils/firebase";
-import playerImg from "../assests/player.jpg";
 
 const PlayerPersonalDetails = () => {
   const params = useParams();
@@ -32,7 +31,7 @@ const PlayerPersonalDetails = () => {
       {isLoading ? (
         <p className="w-full text-center bg-black">Loading...</p>
       ) : (
-        <div className="flex justify-between p-8 gap-6 h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white">
+        <div className="flex flex-wrap justify-between p-8 gap-6 min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white">
           <img
             src={playerDetails.image}
             alt=""

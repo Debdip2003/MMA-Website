@@ -45,7 +45,7 @@ const PlayerList = ({ players }) => {
                     </p>
                     <p>
                       <span className="font-medium text-white">Weight:</span>{" "}
-                      {player.weightClass}
+                      {player.weight}
                     </p>
                     <p>
                       <span className="font-medium text-white">Wins:</span>{" "}
