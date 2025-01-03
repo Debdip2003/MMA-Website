@@ -31,13 +31,11 @@ const PlayerPersonalDetails = () => {
       {isLoading ? (
         <p className="w-full text-center bg-black">Loading...</p>
       ) : (
-        <div className="flex flex-wrap justify-between p-8 gap-6 min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white">
-          <img
-            src={playerDetails.image}
-            alt=""
-            className="aspect-auto h-4/6 mx-auto"
-          />
-          <div className="flex flex-col items-start w-1/2 space-y-3">
+        <div className="flex flex-wrap justify-between p-8 gap-6 min-h-fit w-full bg-gradient-to-b from-black via-black to-gray-800 text-white">
+          <div className=" mx-auto w-4/12 portrait:w-full">
+            <img src={playerDetails.image} alt="" className="aspect-auto" />
+          </div>
+          <div className="flex flex-col items-start w-6/12 portrait:w-full space-y-3">
             <p className="text-5xl capitalize font-bold">
               {playerDetails.firstName} {playerDetails.lastName}
             </p>

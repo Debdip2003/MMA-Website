@@ -35,7 +35,7 @@ const PlayerList = ({ players }) => {
                   <h3 className="text-xl portrait:text-lg flex-1 flex-wrap flex justify-between gap-6 font-semibold text-white md:w-[30%]">
                     {player.firstName} {player.lastName}
                     <div className="text-sm text-gray-400 pt-1 landscape:hidden">
-                      {player.numberofFights}-{player.wins}-{player.losses}
+                      {player.wins}-{player.losses}-{player.draws}
                     </div>
                   </h3>
                   <div className="flex justify-between md:w-[40%] gap-4 text-sm text-gray-400 portrait:hidden">

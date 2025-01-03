@@ -37,6 +37,7 @@ const PlayerDetailsSection = () => {
           weight: doc.data().weight,
           wins: doc.data().wins,
           losses: doc.data().losses,
+          draws: doc.data().draws,
         }));
         setPlayers(playerData);
       } catch (error) {
